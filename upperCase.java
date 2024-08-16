@@ -19,7 +19,7 @@ public class upperCase {
             }
         }
 
-        // Remove the trailing space
+        // Remove the trailing  space  
         return capitalizedString.toString().trim();
 
     }
