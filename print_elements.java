@@ -7,6 +7,6 @@ public class print_elements {
                 System.out.print(" ");
             }
         }
-        
+
     }
 }
