@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class arraySwap {
     public static void main(String[] args) {
-        int[] arr = { 1,3,23,9,18};
+        int[] arr = { 1,3,23,9,18,65,99};
         swap(arr,1,3);
         System.out.println(Arrays.toString(arr));
     }

@@ -1,4 +1,6 @@
+
 import java.util.Scanner;
+
 public class poweroftwo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -10,5 +12,6 @@ public class poweroftwo {
         }
         isPowerOfTwo = isPowerOfTwo && (n == 1);
         System.out.println(isPowerOfTwo);
+
     }
 }

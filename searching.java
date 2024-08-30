@@ -6,7 +6,7 @@ public class searching {
 
         for ( int i =  0; i < n; i++) {
             if ( arr[i] == k) {
-                System.out.println(i+1);
+                System.out.println(i);
             }
         }
     }

@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class arraylist {
     public static void main(String[] args) {
@@ -14,9 +14,9 @@ public class arraylist {
         // get item at any index
 
         for(int i = 0; i < 5 ; i++) {
-            System.out.println(list.get(i)); // pass index here
+            // System.out.println(list.get(i)); // pass index here4
         }
-        // System.out.println(list);
+        System.out.println(list);
     }
     
 }
