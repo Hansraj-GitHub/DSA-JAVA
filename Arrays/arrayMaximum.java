@@ -1,3 +1,4 @@
+
 public class arrayMaximum {
     public static void main(String[] args) {
         int[] arr = {1,52,48,64,25};
