@@ -1,3 +1,4 @@
+
 public class countDigit {
     public static void main(String[] args) {
         int n = 12;
