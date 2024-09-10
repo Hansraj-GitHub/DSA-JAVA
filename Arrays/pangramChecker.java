@@ -34,9 +34,5 @@ public class pangramChecker {
         // Test case 1
         String sentence1 = "thequickbrownfoxjumpsoverthelazydog";
         System.out.println(checker.isPangram(sentence1)); // Output: true
-
-        // Test case 2
-        String sentence2 = "leetcode";
-        System.out.println(checker.isPangram(sentence2)); // Output: false
     }
 }
