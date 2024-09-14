@@ -1,9 +1,9 @@
 
 import java.util.Scanner;
 
-public class print1toN{
+public class printNames1toN{
 
-    static int n;
+   static int n;
     public static void main(String[] args) {
         System.out.print("Enter n : ");
         Scanner sc = new Scanner(System.in);
@@ -15,11 +15,10 @@ public class print1toN{
         if ( i > n){
             return;
         }else{
-            System.out.println(i);
+            System.out.println("Hansraj");
             print(i+1,n);
         }
-    
         
-       
+
     }
 }
