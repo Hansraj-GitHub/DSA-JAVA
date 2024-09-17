@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class factorialList{
     public static void main(String[] args) {
 
-        ArrayList<Long> factorials = factorial(6);
+        ArrayList<Long> factorials = factorial(7);
         System.out.println(factorials); 
     }
 
@@ -20,9 +20,7 @@ public class factorialList{
                 fact.add(facto);
             }
         }
-
         return fact;
-
 
     }
 }
