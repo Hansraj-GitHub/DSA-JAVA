@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class selection_sort {
 
     public static void selectionSort(int[] arr, int n) {
-        for (int i = 0; i <= n - 2; i++) {
+        for (int i = 0; i < n - 1; i++) {
             int mini = i; 
 
             for (int j = i; j <= n - 1; j++) {
