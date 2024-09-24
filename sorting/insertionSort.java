@@ -17,6 +17,7 @@ public class insertionSort{
     }
 
     private static void insertion(int[] arr) {
+        
         for ( int i = 0 ; i <= arr.length -1 ; i++){
             int j = i;
 
