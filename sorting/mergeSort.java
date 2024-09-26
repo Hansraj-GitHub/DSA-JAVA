@@ -4,13 +4,13 @@ public class mergeSort{
     public static void main(String[] args) {
         int[] arr = {5,3,8,4,6};
         int n = arr.length;
-        System.out.println("Before sorting array: ");
+        System.out.print("Before sorting array: ");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
         mergesort(arr, 0, n - 1);
-        System.out.println("After sorting array: ");
+        System.out.print("After sorting array: ");
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
