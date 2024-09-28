@@ -3,6 +3,7 @@ public class array1 {
         int[] arr = { 5,4,3,2,1};
         System.out.println(arr.length);
         System.out.println(arr[2]);
+        //hansraj yadav
     }
     
 }
