@@ -54,6 +54,5 @@ public class mergeSort{
             arr[i] = temp.get(i - low);
 
         }
-        
     }
 }
