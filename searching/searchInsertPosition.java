@@ -1,7 +1,7 @@
     public class searchInsertPosition{
         public static void main(String[] args) {
             int[] nums = {1,3,5,6}; 
-            int target = 3;
+            int target = 5;
             int index = searchInsert(nums, target);
             System.out.println(index);
         }
@@ -18,4 +18,5 @@
                 return nums.length;
         }
     }
+
     // output : 1

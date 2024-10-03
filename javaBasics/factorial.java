@@ -5,7 +5,7 @@ class factorial{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("N: ");
-        double n=sc.nextInt();
+        double n=sc.nextDouble();
         double result = factorial(n);
         
         System.out.println("Factorial = " + result);
@@ -16,6 +16,7 @@ class factorial{
             return 1;
         }
         return n * factorial(n-1);
+        
 
     }
 }

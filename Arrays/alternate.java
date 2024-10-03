@@ -6,7 +6,6 @@ public class alternate {
         int[] number={1,2,3,4,5};
         for( int i= 0; i<number.length; i++) {
             if( i%2==0) {
-            
             System.out.print(number[i]+ " ");
             }
         }
