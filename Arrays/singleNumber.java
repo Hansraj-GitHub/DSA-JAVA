@@ -9,7 +9,6 @@ public class singleNumber{
         System.out.print("Enter Elements :");
 
         // Initialize the array
-
         int[] arr = new int[n];
         System.out.println("Enter the elements of the array:");
           
@@ -18,11 +17,11 @@ public class singleNumber{
             arr[i] = sc.nextInt();
         }
 
-    
         int result = 0;
         for (int i = 0; i < arr.length; i++) {
-            result ^= arr[i];
+            result = result^arr[i];
         }
         System.out.println("Enter the single Elements :" + result);
     }
 }
+
