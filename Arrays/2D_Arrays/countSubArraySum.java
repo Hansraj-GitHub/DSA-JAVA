@@ -25,10 +25,6 @@ public class countSubArraySum {
     }
 
     public static void main(String[] args) {
-        // Example 1
-        int[] nums1 = {1, 1, 1};
-        int k1 = 2;
-        System.out.println("Output: " + subarraySum(nums1, k1)); // Output: 2
         
         // Example 2
         int[] nums2 = {1, 2, 3};
