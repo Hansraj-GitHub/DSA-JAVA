@@ -16,7 +16,9 @@ public class stockBuyAndSell {
         minPrice = Math.min(minPrice, arr[i]);
         maxPro = Math.max(maxPro, arr[i] - minPrice);
     }
+
     return maxPro;
+    
     }
 }
 
