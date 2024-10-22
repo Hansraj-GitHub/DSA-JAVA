@@ -41,6 +41,7 @@ public class ThreeSum {
     }
 
     public static void main(String[] args) {
+        
         ThreeSum threeSum = new ThreeSum();
         int[] nums1 = {-1, 0, 1, 2, -1, -4};
         int[] nums2 = {0, 1, 1};
