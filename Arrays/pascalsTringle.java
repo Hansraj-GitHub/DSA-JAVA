@@ -1,33 +1,31 @@
-
 import java.util.*;
-
 public class pascalsTringle {
-    public static int nCr(int n, int r) {
-        long res = 1;
-        // calculating nCr:
-        for (int i = 0; i < r; i++) {
-            res = res * (n - i);
-            res = res / (i + 1);
+    public static List<Integer> generateRow(int row) {
+        long ans = 1;
+        List<Integer> ansRow = new ArrayList<>();
+        ansRow.add(1); //inserting the 1st element
+
+        //calculate the rest of the elements:
+        for (int col = 1; col < row; col++) {
+            ans = ans * (row - col);
+            ans = ans / col;
+            ansRow.add((int)ans);
         }
-        return (int) res;
+        return ansRow;
     }
 
     public static List<List<Integer>> pascalTriangle(int n) {
         List<List<Integer>> ans = new ArrayList<>();
 
-        // Store the entire Pascal's triangle:
+        //store the entire pascal's triangle:
         for (int row = 1; row <= n; row++) {
-            List<Integer> tempLst = new ArrayList<>(); // temporary list
-            for (int col = 1; col <= row; col++) {
-                tempLst.add(nCr(row - 1, col - 1));
-            }
-            ans.add(tempLst);
+            ans.add(generateRow(row));
         }
         return ans;
     }
 
     public static void main(String[] args) {
-        int n = 5;
+        int n = 6;
         List<List<Integer>> ans = pascalTriangle(n);
         for (List<Integer> it : ans) {
             for (int ele : it) {
@@ -37,3 +35,4 @@ public class pascalsTringle {
         }
     }
 }
+
