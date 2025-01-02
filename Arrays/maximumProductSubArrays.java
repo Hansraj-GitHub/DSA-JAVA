@@ -1,10 +1,11 @@
 public class maximumProductSubArrays {
         public static int maxProduct(int[] nums) {
-            
+
         if (nums == null || nums.length == 0) {
             return 0;
         }
 
+        
         int maxProduct = nums[0]; 
         int currentMax = nums[0];
         int currentMin = nums[0];
