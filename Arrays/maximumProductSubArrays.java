@@ -32,6 +32,5 @@ public class maximumProductSubArrays {
     public static void main(String[] args) {
         int[] nums1 = {2, 3, -2, 4};
         System.out.println("Output: " + maxProduct(nums1)); // Output: 6
-
     }
 }
