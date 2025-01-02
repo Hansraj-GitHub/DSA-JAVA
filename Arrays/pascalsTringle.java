@@ -1,38 +1,47 @@
 import java.util.*;
 public class pascalsTringle {
-    public static List<Integer> generateRow(int row) {
-        long ans = 1;
-        List<Integer> ansRow = new ArrayList<>();
-        ansRow.add(1); //inserting the 1st element
-
-        //calculate the rest of the elements:
-        for (int col = 1; col < row; col++) {
-            ans = ans * (row - col);
-            ans = ans / col;
-            ansRow.add((int)ans);
+      // Method to calculate nCr (combination)
+      public static int nCr(int n, int r) {
+        int result = 1;
+        // Loop to calculate nCr:
+        for (int i = 0; i < r; i++) {
+            result = result * (n - i); // Multiply by (n - i)
+            result = result / (i + 1); // Divide by (i + 1)
         }
-        return ansRow;
+        return result;
     }
 
-    public static List<List<Integer>> pascalTriangle(int n) {
-        List<List<Integer>> ans = new ArrayList<>();
+    // Method to generate Pascal's Triangle
+    public static List<List<Integer>> generatePascalTriangle(int n) {
+        List<List<Integer>> triangle = new ArrayList<>(); // To store the entire triangle
 
-        //store the entire pascal's triangle:
-        for (int row = 1; row <= n; row++) {
-            ans.add(generateRow(row));
+        // Loop through each row
+        for (int row = 0; row < n; row++) {
+            List<Integer> currentRow = new ArrayList<>(); // Temporary list for the current row
+
+            // Loop through each column in the row
+            for (int col = 0; col <= row; col++) {
+                currentRow.add(nCr(row, col)); // Add the combination value
+            }
+
+            // Add the current row to the triangle
+            triangle.add(currentRow);
         }
-        return ans;
+        return triangle;
     }
 
     public static void main(String[] args) {
-        int n = 6;
-        List<List<Integer>> ans = pascalTriangle(n);
-        for (List<Integer> it : ans) {
-            for (int ele : it) {
-                System.out.print(ele + " ");
+        int n = 5; // Number of rows in Pascal's Triangle
+
+        // Generate Pascal's Triangle
+        List<List<Integer>> triangle = generatePascalTriangle(n);
+
+        // Print Pascal's Triangle
+        for (int row = 0; row < triangle.size(); row++) {
+            for (int col = 0; col < triangle.get(row).size(); col++) {
+                System.out.print(triangle.get(row).get(col) + " "); // Print each number
             }
-            System.out.println();
+            System.out.println(); // Move to the next line after each row
         }
     }
 }
-
