@@ -1,31 +1,35 @@
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class sort012 {
-    public static void main(String[] args) {
-        int[] arr = {0,1,2,0,1,2,0,2};
-        List<Integer> mergedList = new ArrayList<>();
+    public static void sortColors(int[] arr) {
+        int low = 0, mid = 0, high = arr.length - 1;
 
-        List<Integer> list1 = new ArrayList<>();
-        List<Integer> list2 = new ArrayList<>();
-        List<Integer> list3 = new ArrayList<>();
-        
-        for ( int i = 0 ; i < arr.length; i++){
-            if(arr[i] == 0){
-                list1.add(arr[i]);
-            }else if(arr[i] == 1){
-                list2.add(arr[i]);
-
-            }else{
-                list3.add(arr[i]);
+        while (mid <= high) {
+            if (arr[mid] == 0) {
+                // Swap arr[low] and arr[mid]
+                swap(arr, low, mid);
+                low++;
+                mid++;
+            } else if (arr[mid] == 1) {
+                mid++;
+            } else { // arr[mid] == 2
+                // Swap arr[mid] and arr[high]
+                swap(arr, mid, high);
+                high--;  // Don't increase mid yet, as swapped value needs checking
             }
         }
-        mergedList.addAll(list1);
-        mergedList.addAll(list2);
-        mergedList.addAll(list3);
+    }
 
-        System.out.println(mergedList);
-        
+    private static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {0, 1, 2, 0, 1, 2};
+        sortColors(arr);
+        System.out.println(Arrays.toString(arr)); // Output: [0, 0, 1, 1, 2, 2]
+
     }
 }
