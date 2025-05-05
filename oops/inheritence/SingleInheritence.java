@@ -10,7 +10,6 @@ class Dog extends Animal {
     }
 }
 
-
 class SingleInheritence{
     public static void main(String[] args) {
         Dog d = new Dog();
